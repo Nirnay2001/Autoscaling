@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: hpa-demo:1.0
+          image: nirnay2001/autoscaling-app:tagname
           imagePullPolicy: IfNotPresent
           ports: [{containerPort: 8080}]
           resources:
