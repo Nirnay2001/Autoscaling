@@ -3,11 +3,11 @@ kind: Service
 metadata:
   name: hpa-demo
 spec:
-  selector: {app: hpa-demo}
+  selector:
+    app: hpa-demo
   ports:
     - protocol: TCP
       port: 80
       targetPort: 8080
-      type: NodePort
+  type: NodePort
 
-      
