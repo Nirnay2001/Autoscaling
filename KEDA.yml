@@ -2,7 +2,6 @@ apiVersion: keda.sh/v1alpha1
 kind: ScaledObject
 metadata:
   name: hpa-demo-scaledobject
-  namespace: dev
 spec:
   scaleTargetRef:
     name: hpa-demo
