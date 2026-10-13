@@ -8,9 +8,8 @@ spec:
     name: hpa-demo
   minReplicaCount: 1
   maxReplicaCount: 10
-  
   triggers:
     - type: cpu
-      metricsType: Utilization
+      metricType: Utilization
       metadata:
         value: "50"
