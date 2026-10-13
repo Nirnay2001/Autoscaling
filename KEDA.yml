@@ -1,0 +1,17 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: hpa-demo-scaledobject
+  namespace: dev
+spec:
+  scaleTargetRef:
+    name: hpa-demo
+  minReplicaCount: 1
+  maxReplicaCount: 10
+  cooldownPeriod: 30
+  pullingInterval: 5
+  triggers:
+    - type: cpu
+      metadata:
+        type: Utilization
+        value: "50"
